@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/3yAkp-x3)
 # Detecting Cycles in Graphs
 
 Kruskal's Algorithm adds edges to the minimum spanning tree, unless they would
@@ -15,3 +16,7 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+The worst case scenario for my implementation would be a $\Theta(|V|^2+ |V|*|E|)$:
+
+This is because we have a for loop that calls the inner cycle function on all the vertices of the graph $\Theta$(|V|). Then in the inner cycle fucntion, in a worse case scenario, we recursively call on all the edges and vertecies that are connected to the current vertex, giving us $\Theta$(|V|+|E|). Which is equal to $\Theta((|V|)(|V|+|E|))$
